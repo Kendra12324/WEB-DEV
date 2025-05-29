@@ -1,26 +1,32 @@
 <?php
 require_once __DIR__ . '/../config/database.php';
 
+
+
 class Sale {
     public $id;
     public $productId;
+    public $quantity;
     public $total;
     public $sale_date;
 
-    public function __construct($productId = null, $total = null) {
+   
+    public function __construct($productId = null, $quantity = null, $total = null) {
         $this->productId = $productId;
+        $this->quantity = $quantity;
         $this->total = $total;
     }
+
 
     public function save() {
         $db = new Database();
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("INSERT INTO sales (product_id, total, sale_date) VALUES (?, ?, NOW())");
-        return $stmt->execute([$this->productId, $this->total]);
+        $stmt = $conn->prepare("INSERT INTO sales (product_id, quantity, total, sale_date) VALUES (?, ?, ?, NOW())");
+        return $stmt->execute([$this->productId, $this->quantity, $this->total]);
     }
 
     public static function getAllSales() {
-    $db = new Database();
+        $db = new Database();
         $conn = $db->getConnection();
         $stmt = $conn->query("SELECT sales.*, products.name AS product_name 
                           FROM sales 
@@ -44,18 +50,15 @@ class Sale {
         return $stmt->execute([$id]);
     }
        
-    
     public static function getSalesByDate($from, $to) {
-         $db = new Database();
-         $conn = $db->getConnection();
-         $stmt = $conn->prepare("SELECT sales.*, products.name AS product_name 
+        $db = new Database();
+        $conn = $db->getConnection();
+        $stmt = $conn->prepare("SELECT sales.*, products.name AS product_name 
                             FROM sales 
                             JOIN products ON sales.product_id = products.id 
                             WHERE DATE(sale_date) BETWEEN ? AND ? 
                             ORDER BY sale_date DESC");
-         $stmt->execute([$from, $to]);
-         return $stmt->fetchAll(PDO::FETCH_OBJ);
+        $stmt->execute([$from, $to]);
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
-
-    
 }
