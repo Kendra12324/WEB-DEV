@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Transactions</title>
+ 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
+
+     <div class="mb-3">
+        <a href="http://localhost/sari-sari-store-sys/home.php" class="btn btn-success">🏠 Home</a>
+    </div>
+
     <div class="container mt-5">
         <h1>Sales Transactions</h1>
         <a href="/sari-sari-store-sys/index.php?controller=sales&action=create" class="btn btn-primary mb-3">Record New Sale</a>
@@ -33,9 +39,7 @@
             </tbody>
         </table>
     </div>
-    <script src="../../public/js/jquery.min.js"></script>
-    <script src="../../public/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../public/js/main.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
