@@ -13,7 +13,7 @@ class Report {
         $stmt->bindParam(':startDate', $startDate);
         $stmt->bindParam(':endDate', $endDate);
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); //mm
     }
 
     public function generateMonthlyReport($month, $year) {
