@@ -38,7 +38,7 @@
 <script src="../../js/jquery.min.js"></script>
 <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Auto-calculate total amount
+    
     document.addEventListener('DOMContentLoaded', function() {
         const productSelect = document.getElementById('productId');
         const quantityInput = document.getElementById('quantity');
