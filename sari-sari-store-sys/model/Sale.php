@@ -14,7 +14,7 @@ class Sale {
     public function __construct($productId = null, $quantity = null, $total = null) {
         $this->productId = $productId;
         $this->quantity = $quantity;
-        $this->total = $total;
+        $this->total = $total; //kkk
     }
 
 
