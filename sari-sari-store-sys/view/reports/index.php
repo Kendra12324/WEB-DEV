@@ -3,10 +3,16 @@
 <html>
 <head>
     <title>Sales Report</title>
+ 
     <link rel="stylesheet" href="../../public/bootstrap/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+     <div class="mb-3">
+        <a href="http://localhost/sari-sari-store-sys/home.php" class="btn btn-success">🏠 Home</a>
+    </div>      
+
 <div class="container mt-5">
     <h2>Sales Report</h2>
     <form method="get" action="/sari-sari-store-sys/index.php">
@@ -32,7 +38,7 @@
                 <th>Product Name</th>
                 <th>No. of Transactions</th>
                 <th>Date</th>
-            </tr>
+                <th>Total Sales</th> 
         </thead>
         <tbody>
             <?php foreach ($sales as $sale): ?>
@@ -40,8 +46,9 @@
                 <td><?= $sale->id ?></td>
                 <td><?= $sale->product_id ?></td>
                 <td><?= htmlspecialchars($sale->product_name) ?></td> 
-                <td><?= $sale->total ?></td>
+                <td><?= $sale->quantity ?></td> 
                 <td><?= date('Y-m-d', strtotime($sale->sale_date)) ?></td>
+                <<td>₱<?= number_format($sale->total, 2) ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
