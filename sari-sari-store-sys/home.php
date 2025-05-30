@@ -191,6 +191,86 @@
                 width: 80%;
             }
         }
+
+        .faq-section {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff9f4;
+            padding: 20px 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(183,65,14,0.15);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: #b7410e;
+            margin-bottom: 20px;
+        }
+
+        .faq-container details {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            padding: 12px 15px;
+            cursor: pointer;
+            border-left: 4px solid #ff8a65;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .faq-container summary {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #5a3e36;
+            outline: none;
+        }
+
+        .faq-container p {
+            margin-top: 8px;
+            padding-left: 5px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1rem;
+            width: 250px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 2px solid #ffb347;
+        }
+
+        button {
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff5722;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #b7410e;
+        }
+
+        .wheel {
+            margin: 20px auto;
+            padding: 15px;
+            font-size: 1.2rem;
+            width: 220px;
+            border-radius: 10px;
+            background: #fff3e0;
+            border: 3px dashed #ffa726;
+        }
+        
     </style>
 </head>
 
