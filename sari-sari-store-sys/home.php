@@ -1,3 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sari-Sari Store  | Home</title>
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <style>
+        
+        .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 480px;
+}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fff0f6, #ffe6e6);
+            color: #5a3e36;
+            margin: 0; 
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            color: #b7410e;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        /* ===== HEADER SECTION ===== */
+        .store-banner {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(183,65,14,0.3);
+        }
+        
+        .store-banner img {
+            width: 100%;
+            display: block;
+        }
+        
+        .welcome-msg {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+     
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: #fff3f2;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(183,65,14,0.15);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card a {
+            text-decoration: none;
+            color: #b7410e;
+            font-weight: 600;
+            display: block;
+            margin-top: 10px;
+        }
+        
+      
+        .promo-box {
+            background-color: #fff8e1;
+            border-left: 6px solid #ff6f00;
+            padding: 15px 20px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(255,111,0,0.2);
+        }
+        
+        .promo-box h4 {
+            margin-top: 0;
+            color: #d84315;
+        }
+        .promo {
+        animation: flip 10s infinite;
+    }
+        @keyframes flip {
+      0% { transform: rotateY(0); }
+     50% { transform: rotateY(180deg); }
+    100% { transform: rotateY(0); }
+    }
+        
+        .store-goals {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            background: #fff3f2;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(183,65,14,0.15);
+        }
+        
+        .store-goals ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .store-goals li {
+            padding: 8px 0;
+            font-weight: 600;
+        }
+        
+        .store-goals li::before {
+            content: "✔ ";
+            color: #ff6f00;
+        }
+        
+       
+        .notes-section {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            background: #fff3f2;
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: 0 3px 10px rgba(183,65,14,0.15);
+        }
+        
+        .notes-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        
+        blockquote {
+            max-width: 600px;
+            margin: 40px auto;
+            font-style: italic;
+            color: #6d4c41;
+            border-left: 5px solid #ffab40;
+            padding-left: 15px;
+        }
+        
+       
+        .social-links {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .social-links a {
+            color: inherit;
+            margin: 0 15px;
+            font-size: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #ff6f00;
+        }
+        
+       
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+
 <body>
     
     <header>
