@@ -289,6 +289,10 @@
             Open 7AM - 8PM daily.
         </p>
     </header>
+
+    
+    
+  
     <main>
     <div class="main-content">
        
@@ -310,6 +314,9 @@
                     </div>
                 </div>
             </section>
+
+
+
        
             <section class="promo-box" aria-label="Today's Promotion">
                 <div class="promo">
@@ -335,9 +342,53 @@
              const presyo = parseFloat(document.getElementById('presyo').value);
             const sukli = bayad - presyo;
                  document.getElementById('resultSukli').innerText = 
-                sukli >= 0 ? Sukli: ₱${sukli.toFixed(2)} : "Kulangan ug bayad!";
+                sukli >= 0 ? `Sukli: ₱${sukli.toFixed(2)}` : "Kulangan ug bayad!";
             }
             </script>
+
+            <section class="notes-section">
+                <h2>🎲 Spin to Win a Discount!</h2>
+                <p>Enter your name below then click "SPIN" to reveal your reward.</p>
+                <input type="text" id="username" placeholder="Enter your name"/>
+                <br>
+                <button onclick="spinWheel()">🎉 SPIN 🎉</button>
+                <div class="wheel" id="result">Your prize will appear here!</div>
+             </section>
+
+            <script>
+                const prizes = [
+                "₱5 off on Softdrinks 🥤",
+                "No reward this time 😅 Try again!",
+                "😅 Try again!",
+                "₱10 off on Snacks 🍪",
+                "No reward this time 😅 Try again!",
+                "₱10 off on Load 📲",
+                "No reward this time 😅 Try again!",
+                "₱3 off on Biscuits ",
+                "No reward this time 😅 Try again!",
+                "₱5 off on Piattos! ",
+                "No reward this time 😅 Try again!",
+                "₱7 off on Corn Chips 🌽",
+                "No reward this time 😅 Try again!"
+                ];
+
+            function spinWheel() {
+                const name = document.getElementById('username').value.trim();
+                const result = document.getElementById('result');
+
+                if (!name) {
+                     result.textContent = "Please enter your name first!";
+                     return;
+                }
+
+                const randomIndex = Math.floor(Math.random() * prizes.length);
+                const reward = prizes[randomIndex];
+
+                result.textContent = `${name}, you won: ${reward}`;
+                result.style.backgroundColor = "#fff3e0";}
+            </script>
+
+
         </div>
        
         <div class="right-column">
@@ -350,6 +401,7 @@
                     <li>Restock all snacks before Friday</li>
                 </ul>
             </section>
+
             
             <section class="notes-section" aria-label="Reminders and Notes">
                 <h3>📌 Reminders & Notes</h3>
@@ -359,6 +411,7 @@
                     <li>Check expiry dates of canned goods</li>
                 </ul>
             </section>
+
             <!-- Events -->
             <section class="notes-section" aria-label="Upcoming Events">
                 <div style="background: #e7f3ff; padding: 15px; border-left: 4px solid #4da6ff; border-radius: 10px;">
@@ -371,20 +424,53 @@
                 </div>
             </section>
 
+            <section class="faq-section" aria-label="Frequently Asked Questions">
+  <h2>❓ Frequently Asked Questions</h2>
+  <div class="faq-container">
+    
+    <details>
+      <summary>🕘 What are your store hours?</summary>
+      <p>We are open from 7:00 AM to 8:00 PM daily, including weekends.</p>
+    </details>
+
+    <details>
+      <summary>📍 Where is your store located?</summary>
+      <p>We are located at CTU MAIN-CAMPUS.</p>
+    </details>
+
+    <details>
+      <summary>📱 Do you sell load?</summary>
+      <p>Yes, we offer Smart, Globe, and TNT load. Just ask us via messenger or visit the store.</p>
+    </details>
+
+    <details>
+      <summary>📦 Can I reserve products?</summary>
+      <p>Yes, you can message us to reserve high-demand products like eggs, rice, and softdrinks.</p>
+    </details>
+
+  </div>
+</section>
+            
+
         </div>
     </div>
+
   
     <div style="background-color: #ffe0b2; padding: 15px; border-radius: 10px; text-align: center;">
         <h2>🙏 Thank you for supporting your local sari-sari store!</h2>
         <p>Every piso counts. Padayon ta! 💪</p>
     </div>
+
 </main>
     
+    
     <footer>
+   
         <blockquote>
             "Small business, big dreams. 💪 Keep pushing forward!"
         </blockquote>
-         
+        
+        
         <section class="social-links" aria-label="Follow us on social media">
             <a href="https://facebook.com/YourPageName" target="_blank" title="Facebook" aria-label="Facebook">
                 <i class="fab fa-facebook-square"></i>
