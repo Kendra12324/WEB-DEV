@@ -6,11 +6,27 @@
  
     <link rel="stylesheet" href="../../public/bootstrap/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .btn-home {
+         background-color: #28a745;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+        .btn-home:hover {
+        background-color:rgb(19, 92, 35);
+        color: #fff;
+    }
+    </style>
+
 </head>
 <body>
 
-     <div class="mb-3">
+     <div class="d-flex gap-2 mb-3">
         <a href="http://localhost/sari-sari-store-sys/home.php" class="btn btn-success">🏠 Home</a>
+        <a href="http://localhost/sari-sari-store-sys/index.php?controller=sales&action=index" class="btn btn-success">Transaction </a>
+        <a href="http://localhost/sari-sari-store-sys/index.php?controller=product&action=index" class="btn btn-success">Product</a>
     </div>      
 
 <div class="container mt-5">
